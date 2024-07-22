@@ -22,13 +22,5 @@ pipeline{
         }
 
         // Add the Release stage here
-        stage("release") {
-            steps {
-                sh '''
-                    oc project RHT_OCP4_DEV_USER-greetings
-                    oc start-build greeting-console  --follow --wait
-                '''
-            }
-        }
     }
 }
