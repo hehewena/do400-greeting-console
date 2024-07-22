@@ -25,8 +25,8 @@ pipeline{
         stage("release") {
             steps {
                 sh '''
-                    oc project cbyztp-greetings
-                    oc start start-build greeting-console  --follow --wait
+                    oc project RHT_OCP4_DEV_USER-greetings
+                    oc start-build greeting-console  --follow --wait
                 '''
             }
         }
