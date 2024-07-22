@@ -22,5 +22,11 @@ pipeline{
         }
 
         // Add the Release stage here
+        stage("Release") {
+            sh '''
+                oc project cbyztp-greetings
+                oc start-build greeting-console  --follow --wait 
+            '''
+        }
     }
 }
